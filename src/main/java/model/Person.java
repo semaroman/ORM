@@ -7,7 +7,6 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
 
-
 @Getter
 @Table(name = "persons")
 @Entity
