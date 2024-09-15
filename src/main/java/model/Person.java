@@ -24,10 +24,10 @@ public class Person {
     private int age;
 
     @Column(nullable = false, length = 16)
-    private String phone_number;
+    private String phoneNumber;
 
     @Column(nullable = false, length = 40)
-    private String city_of_living;
+    private String cityOfLiving;
 
     public Person() {
     }
@@ -38,8 +38,8 @@ public class Person {
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
-                ", phoneNumber='" + phone_number + '\'' +
-                ", cityOfLiving='" + city_of_living + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", cityOfLiving='" + cityOfLiving + '\'' +
                 '}';
     }
 }
