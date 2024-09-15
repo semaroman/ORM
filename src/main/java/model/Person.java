@@ -10,10 +10,6 @@ import lombok.Getter;
 @Table(name = "persons")
 @Entity
 public class Person {
-    @jakarta.persistence.Id
-    @GeneratedValue
-    private int id;
-
     @Column(nullable = false, length = 20)
     private String name;
 
