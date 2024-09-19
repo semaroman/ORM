@@ -1,41 +1,18 @@
 package model;
 
-import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
-import lombok.Getter;
+import lombok.*;
 
-@Getter
-@Table(name = "persons")
 @Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Person {
-    @Column(nullable = false, length = 20)
-    private String name;
-
-    @Column(nullable = false, length = 20)
-    private String surname;
-
-    @Column(nullable = false)
-    private int age;
-
-    @Column(nullable = false, length = 16)
+    @EmbeddedId
+    private PersonFirstKey personFirstKey;
     private String phoneNumber;
-
-    @Column(nullable = false, length = 40)
     private String cityOfLiving;
-
-    public Person() {
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", age=" + age +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", cityOfLiving='" + cityOfLiving + '\'' +
-                '}';
-    }
 }
